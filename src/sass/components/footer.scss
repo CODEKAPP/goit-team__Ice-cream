@@ -33,7 +33,7 @@ footer {
     }
   }
 }
-.footer__text-box {
+.footer_text-box {
   width: 232px;
   @include desktop {
     width: 480px;
@@ -41,24 +41,6 @@ footer {
   @include tablet {
     width: 340px;
   }
-}
-.footer_title-ice-cream,
-.footer_title-made {
-  font-family: Titan One, sans-serif;
-  font-style: Regular;
-  font-size: 30px;
-  line-height: 34px;
-  line-height: 100%;
-  align-items: left;
-  vertical-align: Top;
-  letter-spacing: 4%;
-}
-
-.footer_title-word,
-.footer_title-ice-cream,
-.footer_title-letter,
-.footer_title-made {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer_title .first {
   font-size: 18px;
@@ -70,6 +52,8 @@ footer {
   font-family: Titan One, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
+  display: inline-block;
   @include desktop {
     margin-top: 0;
     margin-bottom: 15px;
@@ -84,6 +68,35 @@ footer {
     letter-spacing: 0.04em;
   }
 }
+.footer_title,
+.footer_title-ice-cream {
+  font-family: Titan One, sans-serif;
+  font-style: Regular;
+  font-size: 30px;
+  align-items: left;
+  vertical-align: top;
+  letter-spacing: 4%;
+  line-height: 100%;
+}
+.footer_title-ice-cream,
+.footer_title-made {
+  display: inline-block;
+}
+.footer_title-made:hover {
+  @include desktop {
+    color: $tertiary-color;
+    transform: translate(-170px, 27px);
+  }
+}
+.footer_text-box:hover .footer_title-ice-cream {
+  transform: translate(55px);
+}
+.footer_title-word,
+.footer_title-ice-cream,
+.footer_title-letter,
+.footer_title-made {
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .footer_second-title {
   font-family: Titan One, sans-serif;
@@ -93,7 +106,7 @@ footer {
   letter-spacing: 0.04em;
   color: $tertiary-color;
   margin-bottom: 43px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   @include desktop {
     font-size: 58px;
@@ -108,7 +121,14 @@ footer {
     margin-bottom: 0;
   }
 }
-
+.footer_second-title:hover.footer_title-letter {
+  width: $original-size;
+  height: $original-size;
+  transition: all 0.3s ease-in-out;
+  @include tablet {
+    transform: scale(1.2);
+  }
+}
 .footer_title-word {
   cursor: default;
   text-align: left;
@@ -116,21 +136,16 @@ footer {
   font-weight: 400;
   text-transform: uppercase;
 }
-.footer__title--word {
+.footer_title-word {
   display: flex;
 }
 
-.footer__title--ice-cream,
-.footer__title--letter,
-.footer__title--made {
-  display: inline-block;
-}
 .footer__title--letter-spase {
   @include desktop {
     margin-right: 17px;
   }
 }
-.footer__title--letter-push {
+.footer__title-letter-title-push {
   margin-right: -2px;
 }
 .contacts-information {
