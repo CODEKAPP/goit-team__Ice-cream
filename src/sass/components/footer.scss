@@ -69,7 +69,8 @@ footer {
   }
 }
 .footer_title,
-.footer_title-ice-cream {
+.footer_title-ice-cream .footer_title-letter,
+.footer_title-made {
   font-family: Titan One, sans-serif;
   font-style: Regular;
   font-size: 30px;
@@ -166,16 +167,26 @@ footer {
 .contact-information {
   font-weight: 700;
   text-align: right;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.86;
+  line-height: 30px;
+  align-items: Left;
+  vertical-align: Top;
+  letter-spacing: 2%;
+  padding-bottom: 60px;
   cursor: default;
 }
-.contact-box {
+.contact-box__text {
   font-weight: 700;
   text-align: right;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.86;
   cursor: default;
+  color: $secondary-color;
+}
+.contact-box__phone .link-footer {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .copyright-box {
   display: flex;
@@ -215,8 +226,10 @@ footer {
   padding-inline-start: 40px;
 }
 .social-box__list {
-  display: list-item;
+  display: flex;
+  justify-content: flex-end;
   text-align: inherit;
+  padding-left: 30px;
 }
 
 .link-footer {
@@ -226,14 +239,34 @@ footer {
 .social-box__icon {
   transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
+    background-color: $tertiary-color;
+  }
+}
+.social-box_icon {
+  transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
     fill: $tertiary-color;
   }
 }
-.social-box__icon {
+.social-box_icon {
   display: block;
   fill: $quaternary-color;
   gap: 35px;
   margin: auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: $primary-color;
+}
+.social-box__icon {
+  display: block;
+  fill: $primary-color;
+  gap: 35px;
+  margin: auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: $quaternary-color;
 }
 .social-box__icon[AttributesStyle] {
   width: 32px;
