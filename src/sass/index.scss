@@ -1,2 +1,9 @@
 @import './common';
 @import './example';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/functions';
+@import './base/global';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/how_its_made';

@@ -1,0 +1,230 @@
+//variable
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../base/global';
+
+footer {
+  position: relative;
+  background-color: $background-color-tertiary;
+  min-width: 320px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  max-width: 480px;
+  @include tablet {
+    max-width: 768px;
+    padding: 0 35px;
+  }
+  @include desktop {
+    max-width: 1280px;
+    padding: 0 115px;
+  }
+  & .footer__container {
+    margin-bottom: 43px;
+    @include tablet {
+      margin-bottom: 91px;
+      display: flex;
+    }
+    @include desktop {
+      margin-bottom: 97px;
+    }
+  }
+}
+.footer__text-box {
+  width: 232px;
+  @include desktop {
+    width: 480px;
+  }
+  @include tablet {
+    width: 340px;
+  }
+}
+.footer_title-ice-cream,
+.footer_title-made {
+  font-family: Titan One, sans-serif;
+  font-style: Regular;
+  font-size: 30px;
+  line-height: 34px;
+  line-height: 100%;
+  align-items: left;
+  vertical-align: Top;
+  letter-spacing: 4%;
+}
+
+.footer_title-word,
+.footer_title-ice-cream,
+.footer_title-letter,
+.footer_title-made {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer_title .first {
+  font-size: 18px;
+  line-height: 1.167;
+  color: $quaternary-color;
+  margin-bottom: 17px;
+  cursor: default;
+  text-align: left;
+  font-family: Titan One, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include desktop {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.133;
+  }
+  @include tablet {
+    margin-top: 7px;
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 1.154;
+    letter-spacing: 0.04em;
+  }
+}
+
+.footer_second-title {
+  font-family: Titan One, sans-serif;
+  font-style: Regular;
+  font-size: 34px;
+  line-height: 1.147;
+  letter-spacing: 0.04em;
+  color: $tertiary-color;
+  margin-bottom: 43px;
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.138;
+    letter-spacing: 0.06em;
+    flex-direction: row;
+  }
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.146;
+    letter-spacing: 0.06em;
+    margin-bottom: 0;
+  }
+}
+
+.footer_title-word {
+  cursor: default;
+  text-align: left;
+  font-family: Titan One, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer__title--word {
+  display: flex;
+}
+
+.footer__title--ice-cream,
+.footer__title--letter,
+.footer__title--made {
+  display: inline-block;
+}
+.footer__title--letter-spase {
+  @include desktop {
+    margin-right: 17px;
+  }
+}
+.footer__title--letter-push {
+  margin-right: -2px;
+}
+.contacts-information {
+  @include tablet {
+    margin-left: auto;
+  }
+}
+.social-box {
+  @include desktop {
+    margin-bottom: 50px;
+    margin-right: 5px;
+  }
+}
+.social-box__links {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-information {
+  font-weight: 700;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.86;
+  cursor: default;
+}
+.contact-box {
+  font-weight: 700;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.86;
+  cursor: default;
+}
+.copyright-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  border-top: 1px solid $primary-color-border;
+  padding-top: 22px;
+  padding-bottom: 25px;
+}
+.contact-box__phone,
+.copyright-box__text {
+  color: $tertiary-color;
+  text-decoration: none;
+}
+.contact-box__phone,
+.copyright-box__text {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.copyright-box__text {
+  color: $quinary-color;
+  font-weight: 700;
+  text-align: center;
+  max-width: 150px;
+  font-size: 14px;
+  line-height: 1.52;
+}
+.social-box__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.social-box__list {
+  display: list-item;
+  text-align: inherit;
+}
+
+.link-footer {
+  cursor: pointer;
+  text-decoration: none;
+}
+.social-box__icon {
+  transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: $tertiary-color;
+  }
+}
+.social-box__icon {
+  display: block;
+  fill: $quaternary-color;
+  gap: 35px;
+  margin: auto;
+}
+.social-box__icon[AttributesStyle] {
+  width: 32px;
+  height: 32px;
+}
+.social-box__icon:not(:root) {
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
