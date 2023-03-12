@@ -1,9 +1,15 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 body {
   font-family: $text-dm-sans;
   color: $quaternary-color;
+  font-style: normal;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -18,25 +24,24 @@ h3,
 h4,
 h5,
 h6,
+ul,
 p {
   margin: 0;
+  padding: 0;
+  font-size: inherit;
 }
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+// img {
+//   display: block;
+//   width: 100%;
+//   height: auto;
+// }
 .list {
   list-style: none;
-  padding-left: 0px;
-  margin: 0px;
+  // padding-left: 0px;
+  // margin: 0px;
 }
 .link {
   text-decoration: none;
   color: currentColor;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
