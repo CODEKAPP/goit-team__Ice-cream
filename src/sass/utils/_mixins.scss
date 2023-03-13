@@ -1,19 +1,19 @@
 @import 'variables';
 @mixin mobile {
-   // @media screen and (min-width: 320px) and (max-width: 767px){   
-    @media screen and (max-width: 767px) {
-        @content;
-    }
+  // @media screen and (min-width: 320px) and (max-width: 767px){
+  @media screen and (max-width: 767px) {
+    @content;
+  }
 }
 @mixin tablet {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        @content;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
 }
 @mixin desktop {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
 @mixin custom-button {
   width: 150px;
@@ -32,25 +32,3 @@
   //@include transition-up;
   transition: transform 0.3s ease-in-out;
 }
-@mixin paddings($paddingL, $paddingR) {
-  padding-left: $paddingL;
-  padding-right: $paddingR;
-}
-@mixin Styles(
-  $font-family,
-  $letter-spacing,
-  $line-height,
-  $font-size,
-  $font-weight
-) {
-  font-family: $font-family;
-  letter-spacing: $letter-spacing;
-  line-height: $line-height;
-  font-size: $font-size;
-  font-weight: $font-weight;
-}
-@mixin Paddings($margin, $padding) {
-  margin: $margin;
-  padding: $padding;
-}
-//ss
