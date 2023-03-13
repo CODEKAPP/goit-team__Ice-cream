@@ -215,10 +215,10 @@ footer {
     color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-box__text:hover,
+.contact-box__text:hover.contact-box__phone,
 .contact-box__phone:hover,
 .contact-box__phone:focus {
-  transform: scale(1.2), translateX(12px);
+  transform: scale(1.2) translateX(12px);
   color: $tertiary-color;
 }
 .copyright-box__text {
