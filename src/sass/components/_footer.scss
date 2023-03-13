@@ -90,7 +90,9 @@ footer {
   }
 }
 .footer_text-box:hover .footer_title-ice-cream {
-  transform: translate(55px);
+  @include desktop {
+    transform: translate(55px);
+  }
 }
 .footer_title-word,
 .footer_title-ice-cream,
@@ -131,14 +133,25 @@ footer {
   @include desktop {
     transform: scale(1.2);
   }
+  @include tablet {
+    transform: scale(1.2);
+  }
 }
 .footer_title-letter {
   width: $original-size;
   height: $original-size;
   transition: all 0.3s ease-in-out;
 }
+@include tablet {
+  font-size: 48px;
+  line-height: 1.146;
+  letter-spacing: 0.06em;
+}
 .footer_title-letter:hover {
   @include desktop {
+    transform: scale(1.2);
+  }
+  @include tablet {
     transform: scale(1.2);
   }
 }
