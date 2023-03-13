@@ -5,13 +5,13 @@
   letter-spacing: 0.03em;
   min-width: 320px;
   cursor: default;
-  @media screen and (min-width: 480px) {
+  @include mobile {
     width: auto;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 768px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 1200px;
   }
 }
