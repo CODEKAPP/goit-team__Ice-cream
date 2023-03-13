@@ -4,7 +4,7 @@
       <use href="/src/images/icons.svg#icon-close"></use>
     </svg>
   </button>
-  <button type="button" title="button" class="button-nav">
+  <button data-modal-open="modal-1"  type="button" title="button" class="button-nav">
     Buy now<svg class="icon-buy" width="8" height="10">
       <use href="/src/images/icons.svg#icon-arrow-buy"></use>
     </svg>
@@ -63,7 +63,7 @@
   </ul>
 </div>
 <header class="header">
-  <div class="container-modificator container">
+  <div class="container-modificator containerr">
     <div class="header-container">
       <nav class="menu-nav">
         <a
@@ -89,7 +89,7 @@
               <use href="/src/images/icons.svg#icon-burger"></use>
             </svg>
           </button>
-          <button type="button" title="button" class="button-tablet">
+          <button  data-modal-open="modal-1"  type="button" title="button" class="button-tablet">
             Buy now<svg class="icon-buy" width="8" height="10">
               <use href="/src/images/icons.svg#icon-arrow-buy"></use>
             </svg>
@@ -149,8 +149,9 @@
           </li>
         </ul>
       </nav>
+      
       <div class="menu-switch">
-        <button title="button" type="button" class="btn-buy">
+        <button data-modal-open="modal-1"  title="button" type="button" class="btn-buy">
           Buy now
           <svg class="icon-buy" width="8" height="10">
             <use href="/src/images/icons.svg#icon-arrow-buy"></use>
@@ -253,6 +254,58 @@
             </button>
           </a>
         </div>
+      </div>
+    </div>
+    <div class="backdrop  is-hidden"  data-modal>
+      <div id="modal-1" class="modal">
+        <form>
+          <button type="button" title="button" class="bton" data-modal-close>
+            <span class="modal-btn-close">x</span>
+          </button>
+          <div class="modal-header">
+            <h2>Syper pyper Ice Cream</h2>
+          </div>
+          <div class="modal-body">
+            <div>
+              <img class="modal-body-img" src="/src/images/home-pic1.png" alt="" width="150px">
+              <input class="modal-body-input" placeholder="how many?" type="input" id="scales" name="scales">
+              <label for="scales"> </label>
+            </div>
+            <div> 
+              <img class="modal-body-img" src="/src/images/home-pic2.png" alt="" width="150px">
+              <input class="modal-body-input" placeholder="how many?" type="input" id="horns" name="horns">
+              <label for="horns"> </label>
+            </div>
+            <div>
+              <img class="modal-body-img" src="/src/images/home-pic3.png" alt="" width="150px">
+              <input class="modal-body-input" placeholder="how many?" type="input" id="horns" name="horns">
+              <label for="horns"></label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <form class="modal-footer-form" name="subscribe" autocomplete="on">
+              <label class="modal-footer-label">
+                <span class="modal-footer-name">Name</span>
+                <input class="modal-footer-date" type="text" name="username"> 
+              </label>
+              <label class="modal-footer-label">
+                <span class="modal-footer-name">Phone</span>
+                <input class="modal-footer-date" type="tel" name="phone_number">
+              </label> 
+              <label class="modal-footer-label">
+                <span class="modal-footer-name">Mail</span>
+                <input class="modal-footer-date" type="email" name="email">
+              </label> 
+              <label class="modal-footer-label"> 
+                <span class="modal-footer-name"></span>
+                <textarea class="modal-date--comment modal-footer-date" name="feedback" rows="5" placeholder="write something and maybe we read this"></textarea>
+              </label>
+              <a title="do it!!!" class="modal-footer-btn">
+                <span class="modal-footer-link"> I want that!</span>
+              </a>
+          </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
