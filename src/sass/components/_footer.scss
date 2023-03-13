@@ -49,7 +49,7 @@ footer {
   margin-bottom: 17px;
   cursor: default;
   text-align: left;
-  font-family: Titan One, sans-serif;
+  font-family: $text-titan-one, $text-dm-sans;
   font-weight: 400;
   text-transform: uppercase;
   position: relative;
@@ -71,7 +71,7 @@ footer {
 .footer_title,
 .footer_title-ice-cream .footer_title-letter,
 .footer_title-made {
-  font-family: Titan One, sans-serif;
+  font-family: $text-titan-one, $text-dm-sans;
   font-style: Regular;
   font-size: 30px;
   align-items: left;
@@ -100,7 +100,7 @@ footer {
 }
 
 .footer_second-title {
-  font-family: Titan One, sans-serif;
+  font-family: $text-titan-one, $text-dm-sans;
   font-style: Regular;
   font-size: 34px;
   line-height: 1.147;
@@ -122,10 +122,22 @@ footer {
     margin-bottom: 0;
   }
 }
-.footer_second-title:hover.footer_title-letter {
+.footer__title-letter-title-push {
   width: $original-size;
   height: $original-size;
   transition: all 0.3s ease-in-out;
+}
+.footer__title-letter-title-push:hover {
+  @include tablet {
+    transform: scale(1.2);
+  }
+}
+.footer_title-letter {
+  width: $original-size;
+  height: $original-size;
+  transition: all 0.3s ease-in-out;
+}
+.footer_title-letter:hover {
   @include tablet {
     transform: scale(1.2);
   }
@@ -133,9 +145,10 @@ footer {
 .footer_title-word {
   cursor: default;
   text-align: left;
-  font-family: Titan One, sans-serif;
+  font-family: $text-titan-one, $text-dm-sans;
   font-weight: 400;
   text-transform: uppercase;
+  padding-top: 16px;
 }
 .footer_title-word {
   display: flex;
@@ -163,6 +176,7 @@ footer {
 .social-box__links {
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 137px;
 }
 .contact-information {
   font-weight: 700;
@@ -184,10 +198,6 @@ footer {
   cursor: default;
   color: $secondary-color;
 }
-.contact-box__phone .link-footer {
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
 .copyright-box {
   display: flex;
   align-items: center;
@@ -197,15 +207,19 @@ footer {
   padding-top: 22px;
   padding-bottom: 25px;
 }
-.contact-box__phone,
-.copyright-box__text {
+.contact-box__phone {
   color: $tertiary-color;
   text-decoration: none;
-}
-.contact-box__phone,
-.copyright-box__text {
+  cursor: pointer;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-box__text:hover.contact-box__phone,
+.contact-box__phone:hover,
+.contact-box__phone:focus {
+  transform: scale(1.2) translateX(12px);
+  color: $tertiary-color;
 }
 .copyright-box__text {
   color: $quinary-color;
@@ -214,7 +228,17 @@ footer {
   max-width: 150px;
   font-size: 14px;
   line-height: 1.52;
+  white-space: nowrap;
+  @include tablet {
+    line-height: 1.86;
+    max-width: 276px;
+    letter-spacing: 0.02em;
+  }
 }
+.copyright-box__text:hover {
+  transform: scale(1.3);
+}
+
 .social-box__links {
   list-style: none;
   margin: 0;
@@ -230,11 +254,6 @@ footer {
   justify-content: flex-end;
   text-align: inherit;
   padding-left: 30px;
-}
-
-.link-footer {
-  cursor: pointer;
-  text-decoration: none;
 }
 .social-box__icon {
   transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
