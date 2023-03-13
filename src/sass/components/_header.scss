@@ -556,7 +556,7 @@
 .modal-body-input {
   display: block;
   background-color: $background-color-secondary;
-  width: 100px;
+  width: 120px;
   border-radius: 5px;
   border: 1px solid $tertiary-color;
   margin-left: auto;
@@ -572,7 +572,7 @@
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 170px;
+  width: 205px;
 }
 .modal-footer-name {
   color: $tertiary-color;
@@ -580,12 +580,15 @@
 .modal-footer-date {
   border-radius: 5px;
   border: 1px solid $tertiary-color;
+  padding-right: 32px;
+}
+.modal-date--comment {
+  padding: 15px;
 }
 .modal-footer-btn {
   padding: 2px 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   border: 1px solid $primary-color-rgba;
   margin-left: auto;
   margin-right: auto;
@@ -599,6 +602,9 @@
   transition: transform 0.3s ease-in-out;
   &:hover {
     transform: translatey(-5px);
+  }
+  @media (max-width: 550px) {
+    height: auto;
   }
 }
 .modal-footer-link {
