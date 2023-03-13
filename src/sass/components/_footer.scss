@@ -128,7 +128,7 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 .footer__title-letter-title-push:hover {
-  @include tablet {
+  @include desktop {
     transform: scale(1.2);
   }
 }
@@ -138,7 +138,7 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 .footer_title-letter:hover {
-  @include tablet {
+  @include desktop {
     transform: scale(1.2);
   }
 }
