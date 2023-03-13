@@ -1,0 +1,174 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+/*
+    MIS ESTILOS PARA LA SECCIÓN ADVANTAGES-KG
+*/
+
+#section-advantages-kg{
+    margin-bottom: 60px;
+    background-color: $background-color-tertiary;
+}
+
+.advantages{
+    padding-top: 40px;
+}
+
+.advantage-list{
+    list-style: none;
+
+    &__item{
+        margin-bottom: 32px;
+        width: 250px;
+
+        @include mobile {
+            width: 200px;
+        }
+
+        @include tablet {
+            width: 200px;
+        }
+    }
+
+    &:hover &__item{
+        @include desktop {
+            /* Animation */
+            animation-name: giro2;
+            animation-duration: 4s;
+            animation-timing-function:cubic-bezier();
+        }
+        @keyframes giro2 {
+            0% {
+                transform: rotate(0deg);
+            }
+    
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &__item:not(:hover){
+        @include desktop {
+            /* Animation */
+            animation-name: inverso;
+            animation-duration: 4s;
+            animation-timing-function:cubic-bezier();
+        }
+    
+        @keyframes inverso {
+            0% {
+                transform: rotate(360deg);
+            }
+    
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__icon{
+        margin-bottom: 16px;
+        cursor: pointer;
+        /* Animation */
+        animation-name: giro;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes giro {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__title{
+        font-size: 36px;
+        font-weight: 400;
+        line-height: calc(41px / 36px);
+        font-family: $text-titan-one;
+        color: $tertiary-color;
+        margin-bottom: 4px;
+        padding-bottom: 16px;
+    }
+
+    &__text{
+        font-size: inherit;
+        font-style: normal;
+        line-height: calc(20px / 16px);
+        font-weight: 700;
+        font-family: $text-dm-sans;
+        color: $secondary-color;
+    }
+
+    @include tablet {
+        display: flex;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+
+} //Fin del .advantage-list
+
+
+
+/*
+    TIPOS DE PANTALLA DIFERENTES AL MOVIL (HASTA 767 PX)
+*/
+
+
+
+/* @media screen and (min-width: 1200px) {
+
+    .advantage-list{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 80px;
+
+        &__item{
+            width: 200px;
+        }
+
+        &__item:hover{
+            animation-name: giro2;
+            animation-duration: 4s;
+            animation-timing-function:cubic-bezier();
+        }
+
+        &__item:not(:hover){
+            animation-name: inverso;
+            animation-duration: 4s;
+            animation-timing-function:cubic-bezier();
+        }
+    }
+
+    @keyframes giro2 {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes inverso {
+        0% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+} */
