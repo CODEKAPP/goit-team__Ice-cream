@@ -22,6 +22,44 @@ function hideTextOnSmallScreens() {
     button.style.boxShadow = 'none';
   }
 }
+function hideTextOnSmallScreens() {
+  if (window.innerWidth > 768) {
+    svg.style.transform = 'rotate(180deg)';
+    container.style.display = 'block';
+    currentState = 'visible';
+    button.querySelector('span').textContent = 'Read less ';
+    button.style.transform = 'perspective(83px) rotateY(-7deg)';
+    button.style.boxShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+    button.addEventListener('click', function () {
+      // Si el contenedor está oculto, mostrarlo y cambiar el texto del botón
+      if (currentState === 'none') {
+        svg.style.transform = 'rotate(180deg)';
+        container.style.display = 'block';
+        currentState = 'visible';
+        button.querySelector('span').textContent = 'Read less ';
+        button.style.transform = 'perspective(83px) rotateY(-7deg)';
+        button.style.boxShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+      }
+    });
+  } else {
+      if (currentState === 'none') {
+        svg.style.transform = 'rotate(180deg)';
+        container.style.display = 'block';
+        currentState = 'visible';
+        button.querySelector('span').textContent = 'Read less ';
+        button.style.transform = 'perspective(83px) rotateY(-7deg)';
+        button.style.boxShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+      } else {
+        if (currentState === 'visible') {
+          svg.style.transform = 'rotate(180deg)';
+          container.style.display = 'block';
+          currentState = 'visible';
+          button.querySelector('span').textContent = 'Read less ';
+          button.style.transform = 'perspective(83px) rotateY(-7deg)';
+          button.style.boxShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+        }
+  }
+}
 
 // Agregar un evento de clic al botón
 button.addEventListener('click', function () {
