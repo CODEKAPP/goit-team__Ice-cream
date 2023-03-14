@@ -87,7 +87,7 @@
         margin-right: 150px;
     }
     }
-
+    
     .circle{
     background-color: $background-color-septenary;
     width: 5px;
@@ -102,15 +102,13 @@
      border-radius: 50%;
      margin-left: 10px;
     }
-
-    .circle-two{
+        .circle-two{
     background-color: $background-color-septenary;
     width: 5px;
     height: 5px;
     border-radius: 50%;
     margin-left: 10px;
     }
-
     .svg-comment-home{
      width: 22px;
     height: 22px;
@@ -125,7 +123,6 @@
         margin-left: 360px;
     }
     }
-
     .house{
      background-color: #D9D9D9;
     border-radius: 50%;
@@ -134,7 +131,6 @@
     margin-top: -25px;
     margin-left: 400px;
     }
-
     .house1{
         background-color: #D9D9D9;
        border-radius: 50%;
@@ -143,7 +139,6 @@
        margin-top: -25px;
        margin-left: 20px;
        }
-       
     .transition{
         display: flex;
         @include desktop{
