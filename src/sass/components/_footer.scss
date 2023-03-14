@@ -90,7 +90,9 @@ footer {
   }
 }
 .footer_text-box:hover .footer_title-ice-cream {
-  transform: translate(55px);
+  @include desktop {
+    transform: translate(55px);
+  }
 }
 .footer_title-word,
 .footer_title-ice-cream,
@@ -136,7 +138,11 @@ footer {
   width: $original-size;
   height: $original-size;
   transition: all 0.3s ease-in-out;
+  @include tablet {
+    letter-spacing: 0.04em;
+  }
 }
+
 .footer_title-letter:hover {
   @include desktop {
     transform: scale(1.2);
@@ -210,17 +216,18 @@ footer {
 .contact-box__phone {
   color: $tertiary-color;
   text-decoration: none;
+  transform: scale(1);
   cursor: pointer;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contact-box__text:hover.contact-box__phone,
+.contact-information:hover,
 .contact-box__phone:hover,
 .contact-box__phone:focus {
   transform: scale(1.2) translateX(12px);
-  color: $tertiary-color;
+  color: $tertiary-color; ///
 }
+
 .copyright-box__text {
   color: $quinary-color;
   font-weight: 700;
