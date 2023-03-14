@@ -15,7 +15,7 @@
         title="link"
         target="_self"
         rel="noreferrer noopener nofollow"
-        href="#"
+        href="#header"
         class="menu-link"
         >Home</a
       >
@@ -45,7 +45,7 @@
         title="link"
         target="_self"
         rel="noreferrer noopener nofollow"
-        href="#"
+        href="#products"
         class="menu-link"
         >Our products</a
       >
@@ -62,13 +62,13 @@
     </li>
   </ul>
 </div>
-<header class="header">
+<header id="header" class="header">
   <div class="container-modificator containerr">
     <div class="header-container">
       <nav class="menu-nav">
         <a
           title="link"
-          href="#"
+          href="#header"
           target="_self"
           rel="noreferrer noopener nofollow"
           class="logo"
@@ -101,7 +101,7 @@
             <a
               title="link"
               class="menu-list-home link"
-              href="#"
+              href="#header"
               target="_self"
               rel="noreferrer noopener nofollow"
               >Home</a
@@ -131,7 +131,7 @@
             <a
               title="link"
               class="menu-list-link link"
-              href="#"
+              href="#products"
               target="_self"
               rel="noreferrer noopener nofollow"
               >Our products</a
@@ -168,7 +168,7 @@
           </h1>
           <button title="button" type="button" class="btn-products">
             <a
-              href="#"
+              href="#products"
               target="_self"
               rel="noreferrer noopener nofollow"
               title="link"
@@ -205,7 +205,7 @@
       </div>
       <a
         title="link"
-        href="#"
+        href="#products"
         class="hero-link-icecream"
         target="_self"
         rel="noreferrer noopener nofollow"
@@ -247,7 +247,7 @@
             target="_self"
             rel="noreferrer noopener nofollow"
           >
-            <button title="button" type="button" class="header-btn-milk">
+            <button href="how-its-made.html" title="button" type="button" class="header-btn-milk">
               <svg class="header-btn-svg-milk" width="10" height="10">
                 <use href="/src/images/icons.svg#icon-arrow-right"></use>
               </svg>
@@ -258,52 +258,50 @@
     </div>
     <div class="backdrop  is-hidden"  data-modal>
       <div id="modal-1" class="modal">
-        <form>
+        <form id="modal-form">
           <button type="button" title="button" class="bton" data-modal-close>
             <span class="modal-btn-close">x</span>
           </button>
           <div class="modal-header">
             <h2>Syper pyper Ice Cream</h2>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" >
             <div>
               <img class="modal-body-img" src="/src/images/home-pic1.png" alt="" width="150px">
-              <input class="modal-body-input" placeholder="how many?" type="input" id="scales" name="scales">
-              <label for="scales"> </label>
+              <input class="modal-body-input" placeholder="how many?" type="number" id="cone" name="cone">
+              <label for="cone"> </label>
             </div>
             <div> 
               <img class="modal-body-img" src="/src/images/home-pic2.png" alt="" width="150px">
-              <input class="modal-body-input" placeholder="how many?" type="input" id="horns" name="horns">
-              <label for="horns"> </label>
+              <input class="modal-body-input" placeholder="how many?" type="number" id="smoothie" name="smoothie">
+              <label for="smoothie"> </label>
             </div>
             <div>
               <img class="modal-body-img" src="/src/images/home-pic3.png" alt="" width="150px">
-              <input class="modal-body-input" placeholder="how many?" type="input" id="horns" name="horns">
+              <input class="modal-body-input" placeholder="how many?" type="number" id="horns" name="horns">
               <label for="horns"></label>
             </div>
           </div>
           <div class="modal-footer">
-            <form class="modal-footer-form" name="subscribe" autocomplete="on">
-              <label class="modal-footer-label">
-                <span class="modal-footer-name">Name</span>
-                <input class="modal-footer-date" type="text" name="username"> 
-              </label>
-              <label class="modal-footer-label">
-                <span class="modal-footer-name">Phone</span>
-                <input class="modal-footer-date" type="tel" name="phone_number">
-              </label> 
-              <label class="modal-footer-label">
-                <span class="modal-footer-name">Mail</span>
-                <input class="modal-footer-date" type="email" name="email">
-              </label> 
-              <label class="modal-footer-label"> 
-                <span class="modal-footer-name"></span>
-                <textarea class="modal-date--comment modal-footer-date" name="feedback" rows="5" placeholder="write something and maybe we read this"></textarea>
-              </label>
-              <a title="do it!!!" class="modal-footer-btn">
-                <span class="modal-footer-link"> I want that!</span>
-              </a>
-          </div>
+            <label class="modal-footer-label">
+              <span class="modal-footer-name">Name</span>
+              <input class="modal-footer-date" type="text" name="username" > 
+            </label>
+            <label class="modal-footer-label">
+              <span class="modal-footer-name">Phone</span>
+              <input class="modal-footer-date" type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+            </label> 
+            <label class="modal-footer-label">
+              <span class="modal-footer-name">Mail</span>
+              <input class="modal-footer-date" type="email" name="email"  pattern="[^@\s]+@[^@\s]+\.[^@\s]+$" required>
+            </label> 
+            <label class="modal-footer-label"> 
+              <span class="modal-footer-name"></span>
+              <textarea class="modal-date--comment modal-footer-date" name="feedback" rows="5" placeholder="write something and maybe we read this"></textarea>
+            </label>
+            <button title="do it!!!" class="modal-footer-btn">
+              <span class="modal-footer-link"> I want that!</span>
+            </button>
           </div>
         </form>
       </div>

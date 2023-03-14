@@ -8,7 +8,6 @@ footer {
   background-color: $background-color-tertiary;
   min-width: 320px;
 }
-
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -41,6 +40,23 @@ footer {
   @include tablet {
     width: 340px;
   }
+}
+.footer_title-ice-cream,
+.footer_title-made {
+  font-family: Titan One, sans-serif;
+  font-style: Regular;
+  font-size: 30px;
+  line-height: 34px;
+  line-height: 100%;
+  align-items: left;
+  vertical-align: Top;
+  letter-spacing: 4%;
+}
+.footer_title-word,
+.footer_title-ice-cream,
+.footer_title-letter,
+.footer_title-made {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer_title .first {
   font-size: 18px;
@@ -165,7 +181,11 @@ footer {
 .footer_title-word {
   display: flex;
 }
-
+.footer__title--ice-cream,
+.footer__title--letter,
+.footer__title--made {
+  display: inline-block;
+}
 .footer__title--letter-spase {
   @include desktop {
     margin-right: 17px;
