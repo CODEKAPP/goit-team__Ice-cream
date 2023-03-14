@@ -133,6 +133,9 @@ footer {
   @include desktop {
     transform: scale(1.2);
   }
+  @include tablet {
+    transform: scale(1.2);
+  }
 }
 .footer_title-letter {
   width: $original-size;
@@ -145,6 +148,9 @@ footer {
 
 .footer_title-letter:hover {
   @include desktop {
+    transform: scale(1.2);
+  }
+  @include tablet {
     transform: scale(1.2);
   }
 }
