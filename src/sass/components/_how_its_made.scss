@@ -4,7 +4,6 @@
 @import '../base/global';
 
 .how__its__made {
-  // background-image: url(/src/images/sectionbg11.png);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -23,7 +22,6 @@
   bottom: 0;
   background-color: $background-color-tertiary;
   background-image: url(/src/images/sectionbg11.png);
-  // backdrop-filter: none;
   background-position: 0% 90%;
   background-repeat: repeat-y;
   background-size: contain;
@@ -31,27 +29,33 @@
     trembleBackground 50s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }
 .imagen__made {
+  cursor: none;
+  width: 280px;
+  height: 279px;
+  @include tablet {
+    width: 336px;
+    height: 335px;
+  }
+  @include desktop {
+    width: 501px;
+    height: 501px;
+  }
   &:hover,
   &:focus {
-    animation: test 22s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
+    animation: jug 5s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
   }
 }
-
-@keyframes test {
+@keyframes jug {
   0% {
     transform: translate(0, 0);
-    // transform: rotate(0deg);
   }
   25% {
     transform: translate(16px, -16px);
-    // transform: rotate(12deg);
   }
   50% {
-    // transform: translate(0, 0);
     transform: rotate(50deg);
   }
   75% {
-    // transform: translate(-3px, 3px);
     transform: rotate(-12deg);
   }
   100% {
@@ -99,18 +103,15 @@
   }
 }
 .container {
-  // background-color: blue;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
   max-width: 767px;
   @include tablet {
     max-width: 1199px;
-    padding: 0 35px;
   }
   @include desktop {
     max-width: 1300px;
-    padding: 0 115px;
   }
   & .footer__container {
     margin-bottom: 43px;
@@ -124,14 +125,13 @@
   }
 }
 .container-center {
-  // background-color: $background-color-tertiary;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 }
 .made_subtitle {
   font-family: $text-titan-one;
@@ -157,7 +157,6 @@
     animation-name: reset;
   }
 }
-
 @keyframes subtitle {
   0% {
     transform: translateY(-100px);
@@ -168,7 +167,6 @@
     transform: translateY(0px);
   }
 }
-
 .made__title {
   font-family: $text-titan-one;
   font-size: 34px;
@@ -187,18 +185,15 @@
   @include tablet {
     min-width: none;
   }
-
   &:hover {
     animation-name: title;
     animation-play-state: running;
-
     cursor: none;
   }
   &:not(:hover) {
     animation-name: reset;
   }
 }
-
 @keyframes title {
   0% {
     transform: translateY(200px);
@@ -209,7 +204,6 @@
     transform: translateY(0px);
   }
 }
-
 @keyframes reset {
   0% {
     transform: translateY(0px);
@@ -221,16 +215,20 @@
   @include tablet {
     display: flex;
   }
+  @include desktop {
+    display: flex;
+  }
 }
 .description__imagen__made {
   margin: auto;
   padding: 0 20px;
   @include tablet {
-    padding-left: 32px;
     margin-right: 32px;
   }
+  @include desktop{
+    margin-right: 99px;
+  }
 }
-
 .description-more {
   font-weight: 500;
   font-size: 12px;
@@ -285,9 +283,9 @@
   margin-right: 13.62px;
   width: 176px;
   height: 44px;
-  // background-color: red;
   border: none;
   margin-bottom: 40px;
+  cursor: pointer;
   &:hover,
   &:focus {
     transform: perspective(83px) rotateY(-7deg);
@@ -310,14 +308,10 @@
 .icon__less {
   margin-left: 28.62px;
 }
-
-// .description__made {
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: column;
-//   background-color: red;
-//   &:first-child {
-//     margin-bottom: 40px;
-//     background-color: red;
-//   }
-// }
+#icon__less {
+  stroke: $background-color-septenary;
+}
+.container-less {
+  display: block;
+  background-color: red;
+}
