@@ -8,7 +8,7 @@ $quinary-color: #907e82; //description
 // $septenary-color: #afb1bb;
 
 //colors rgba
-// $primary-color-rgba: rgba(255, 255, 255, 0.6);// example
+$primary-color-rgba: rgba(224, 10, 31, 0.1);
 
 //Backgroup
 $background-color-primary: #ffb8ca; //section-one
@@ -18,17 +18,24 @@ $background-color-quaternary: #fafafa; //coment
 $background-color-quinary: #f0d1a5; //card-two
 $background-color-senary: #c2e297; //card-one
 $background-color-septenary: #d41443; //buton
+
 //Backgroup rgba
 $background-color-rgba-primary: rgba(255, 184, 202, 1);
 $background-color-rgba-secondary: rgba(225, 121, 146, 1);
 $background-color-rgba-tertiary: rgb(238, 229, 229);
+$background-color-rgba-quaternary: rgba(0, 0, 0, 0.2);
+
 //box-shadow
-// $box-shadow-primary:
+$box-shadow-primary: 0px 8px 30px rgba(212, 20, 67, 0.1);
 // $box-shadow-secondary:
 // $box-shadow-tertiary:
 
 //others
+$primary-color-border: #e1e1e1; //copyright box
 
 //Text
-$text-dm-sans: 'DM Sans'; // example
-$text-titan-one: 'Titan One'; // example
+$text-dm-sans: 'DM Sans', 'sans-serif'; // example
+$text-titan-one: 'Titan One', 'sans-serif'; // example
+//// Definir las variables para el tamaño original y el tamaño con zoom
+$original-size: 100%;
+$zoom-size: 120%;
