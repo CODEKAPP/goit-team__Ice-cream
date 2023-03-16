@@ -4,87 +4,143 @@
 .product {
   width: 100vw;
   display: flex;
+  @include desktop {
+    width: 100%;
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
+  }
 }
-.product__sub-tittle {
+
+.container__products {
+  @include desktop {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+&__sub-tittle {
   font-family: $text-titan-one;
   font-size: 1.8em;
   text-align: center;
   color: $quaternary-color;
   padding: 0;
-  margin: 60px 0 18px;
+  margin: 3.75em 0 1.1em;
   transition: letter-spacing 500ms ease-in;
 }
-.product__tittle {
+
+&__sub-tittle:hover {
+  letter-spacing: 0.5em;
+}
+
+&__tittle {
   font-family: $text-titan-one;
   font-size: 4.2em;
   text-align: center;
   color: $tertiary-color;
   margin: 0;
-  margin-bottom: 250px;
+  margin-bottom: 15, 6em;
   transition: letter-spacing 500ms ease-in;
 }
-.products__cards {
+
+&__tittle:hover {
+  letter-spacing: 0.5em;
+}
+
+&__wrapper {
+  @include desktop {
+    margin: 0;
+    display: flex;
+  }
+}
+
+&__cards {
   width: 100vw;
-  min-width: 368px;
+  min-width: 23em;
   position: relative;
   display: flex;
   justify-content: center;
   margin: 0;
-  margin-bottom: 230px;
+  margin-bottom: 14, 3em;
+  @include desktop {
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    margin: 0 0, 6em 0;
+  }
 }
-.products__cards:last-child {
-  margin-bottom: 60px;
+
+&__cards:last-child {
+  margin-bottom: 3, 75em;
 }
-.product__image {
+
+&__image {
   position: absolute;
   top: -15em;
   z-index: 1;
-  min-width: 368px;
+  min-width: 23em;
 }
-.product__card {
+
+&__card {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  padding: 60px;
+  padding: 3, 75em;
   margin: 1em;
-  border-radius: 28px;
+  border-radius: 1, 75em;
+  @include desktop {
+    max-width: 23em;
+    height: auto;
+    padding: 2em;
+    margin: 0;
+    border-radius: 1, 75em;
+  }
 }
+
 .ice-cream-card {
   background-color: $background-color-primary;
 }
+
 .ice-tea {
   background-color: $background-color-quinary;
 }
+
 .milkshake {
   background-color: $background-color-senary;
 }
-.product__card-title {
+
+&__card-title {
   color: $primary-color;
   font-family: $text-titan-one;
-  font-size: 30px;
+  font-size: 1, 8em;
   font-weight: 400;
   margin: 0;
-  margin-top: 140px;
+  margin-top: 8, 75em;
 }
+
 .circle::after {
   content: '...';
   color: $primary-color;
-  font-size: 50px;
+  font-size: 3, 1em;
 }
-.product__card-description {
+
+&__card-description {
   color: $primary-color;
   font-family: $text-dm-sans;
   font-size: 1em;
   font-weight: 700;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2, 5em;
+  margin-bottom: 2, 5em;
 }
-.product__card-button {
-  width: 60px;
-  height: 60px;
+
+&__card-button {
+  width: 3, 75em;
+  height: 3, 75em;
   background-color: $background-color-secondary;
   fill: $tertiary-color;
   border-radius: 50%;
@@ -92,45 +148,9 @@
   left: 0;
   transition: transform 500ms ease-in-out, background-color 250ms ease-in-out;
 }
-// @media (min-width: 768px) {
-.product {
-  width: 100%;
-  min-width: 1200px;
-  display: flex;
-  justify-content: center;
-}
-.container__products {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.product__sub-tittle:hover {
-  letter-spacing: 0.5em;
-}
-.product__tittle:hover {
-  letter-spacing: 0.5em;
-}
-.product__wrapper {
-  margin: 0;
-  display: flex;
-}
-.products__cards {
-  width: 100%;
-  display: inline-block;
-  justify-content: center;
-  margin: 0 10px 0;
-}
-.product__card {
-  max-width: 368px;
-  height: auto;
-  padding: 2em;
-  margin: 0px;
-  border-radius: 28px;
-}
-.product__card-button:hover {
+
+&__card-button:hover {
   background-color: $background-color-septenary;
   fill: $primary-color;
   transform: rotate(270deg);
 }
-// }
