@@ -7,6 +7,7 @@ footer {
   position: relative;
   background-color: $background-color-tertiary;
   min-width: 320px;
+  margin: 120, 16, 16, 97;
 }
 .container {
   margin-left: auto;
@@ -195,11 +196,14 @@ footer {
   margin-right: -2px;
 }
 .contacts-information {
+  margin-left: 255px;
+  vertical-align: Top;
   @include tablet {
     margin-left: auto;
   }
 }
 .social-box {
+  vertical-align: Top;
   @include desktop {
     margin-bottom: 50px;
     margin-right: 5px;
@@ -208,7 +212,16 @@ footer {
 .social-box__links {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 137px;
+  line-height: 100%;
+  align-items: right;
+  vertical-align: Top;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
 .contact-information {
   font-weight: 700;
@@ -227,6 +240,8 @@ footer {
   text-align: right;
   font-size: 16px;
   line-height: 1.86;
+  align-items: right;
+  vertical-align: Top;
   cursor: default;
   color: $secondary-color;
 }
@@ -242,6 +257,8 @@ footer {
 .contact-box__phone {
   color: $tertiary-color;
   text-decoration: none;
+  align-items: right;
+  vertical-align: Top;
   transform: scale(1);
   cursor: pointer;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
