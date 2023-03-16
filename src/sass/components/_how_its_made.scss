@@ -137,6 +137,7 @@
   font-family: $text-titan-one;
   font-size: 18px;
   line-height: 1.16em;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -144,27 +145,39 @@
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
-  animation-name: subtitle;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    animation-name: subtitle;
-    animation-play-state: running;
-    cursor: none;
+  
+  @include tablet{
+    &:hover {
+      animation-name: subtitle;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-play-state: running;
+      cursor: none;
+    }
   }
-  &:not(:hover) {
-    animation-name: reset;
+  @include desktop{
+    &:hover {
+      animation-name: subtitle;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-play-state: running;
+      cursor: none;
+    }
   }
+
 }
 @keyframes subtitle {
   0% {
-    transform: translateY(-100px);
-    letter-spacing: 5.5px;
+    //transform: translateY(-100px);
+    font-size: 30px;
+    letter-spacing: 18px;
+    //letter-spacing: 5.5px;
     z-index: 3;
   }
   100% {
-    transform: translateY(0px);
+    //transform: translateY(0px);
+    font-size: 19px;
+    letter-spacing: 3px;
   }
 }
 .made__title {
@@ -178,30 +191,34 @@
   color: $background-color-septenary;
   min-width: 200px;
   padding: 5px;
-  animation-name: title;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
   @include tablet {
     min-width: none;
+    &:hover {
+      animation-name: title;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
-  &:hover {
-    animation-name: title;
-    animation-play-state: running;
-    cursor: none;
-  }
-  &:not(:hover) {
-    animation-name: reset;
+  @include desktop{
+    &:hover {
+      animation-name: title;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }
 @keyframes title {
   0% {
-    transform: translateY(200px);
-    letter-spacing: 0.5px;
+    //transform: translateY(200px);
+    letter-spacing: 30px;
+    font-size: 54px;
     z-index: 3;
   }
   100% {
-    transform: translateY(0px);
+    //transform: translateY(0px);
+    letter-spacing: 0.5px;
+    font-size: 35px;
   }
 }
 @keyframes reset {
@@ -245,6 +262,15 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(25px / 14px);
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(28px / 16px);
+  }
 }
 .description__main__content-more {
   width: 280px;
@@ -270,6 +296,15 @@
   }
   &:last-child {
     padding-bottom: 15px;
+  }
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(25px / 14px);
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(27px / 14px);
   }
 }
 .button-less {
