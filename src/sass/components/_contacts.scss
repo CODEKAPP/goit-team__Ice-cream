@@ -4,12 +4,13 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
-  min-width: 320px;
+  @include mobile {
+    max-width: 767px;
+  }
   @include tablet {
     padding: 0 35px;
     max-width: 767px;
   }
-  // remplazar valores
   @include desktop {
     min-width: 1200px;
     padding: 0 115px;
@@ -34,16 +35,13 @@
   margin: auto;
   padding: 0 0 113px;
   background-color: $background-color-rgba-tertiary;
-}
-
-.section-contacts {
   @media screen and (min-width: 768px) {
     margin: auto;
     padding: 0 0 165px;
   }
 }
 
-.section-contacts > .container {
+.section-contacts > .conta {
   margin: auto;
   padding: 0 50px;
 
@@ -103,7 +101,7 @@
     margin-right: 30px;
   }
 }
-.section-contact__cat-list {
+.section-contacts__cat-list {
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -128,15 +126,14 @@
   &.one {
     background-color: $background-color-quinary;
   }
-  &.two {
+  &.thow {
     background-color: $background-color-senary;
     width: 130px;
   }
   &.three {
     background-color: $background-color-quinary;
   }
-}
-.section-contacts__place {
+
   @media screen and (min-width: 768px) {
     display: flex;
     width: 73px;
@@ -155,17 +152,11 @@
   font-weight: 500;
   color: $secondary-color;
   margin-bottom: 10px;
-}
-
-.section-contacts__subtitle {
   @media screen and (min-width: 768px) {
     margin-bottom: 14px;
     font-size: 14px;
   }
-}
-
-.section-contacts__subtitle {
-  @include desktop {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 10px;
     font-family: $text-dm-sans;
     letter-spacing: -spacing;
@@ -174,7 +165,6 @@
     font-weight: -weight;
   }
 }
-
 .section-contacts__subtitle.day {
   margin-bottom: 0px;
 }
@@ -247,6 +237,7 @@
   font-size: 12px;
   font-weight: 500;
   color: #907e82;
+  text-decoration: none;
 
   @media screen and (min-width: 768px) {
     display: flex;
