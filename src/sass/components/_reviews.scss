@@ -140,6 +140,8 @@
   margin-top: 20px;
   width: 100%;
   text-align: center;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 
 .container-circle {
