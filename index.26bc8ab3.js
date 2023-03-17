@@ -1,0 +1,2 @@
+window.onscroll=function(){document.body.scrollTop>20||document.documentElement.scrollTop>20?document.querySelector(".scroll-to-top").style.display="block":document.querySelector(".scroll-to-top").style.display="none"},document.querySelector(".scroll-to-top").addEventListener("click",(function(o){o.preventDefault(),document.querySelector("#header").scrollIntoView({behavior:"smooth"})}));
+//# sourceMappingURL=index.26bc8ab3.js.map
