@@ -350,3 +350,59 @@
   display: block;
   background-color: red;
 }
+
+// arrow
+
+.scroll-to-top {
+  position: fixed;
+  display: none;
+  justify-items: center;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: $background-color-rgba-secondary;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  fill: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  z-index: 9999;
+}
+.scroll-to-top:hover {
+  background-color: $background-color-septenary;
+  cursor: pointer;
+  animation: header 3s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
+}
+.scroll-to-top:not(:hover) {
+  cursor: pointer;
+  animation: header 8s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
+}
+@keyframes header {
+  0% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(0px, -16px);
+  }
+  25% {
+    transform: rotate(35deg);
+  }
+  35% {
+    transform: rotate(-20deg);
+  }
+  65% {
+    transform: translate(0px, 10px);
+  }
+  75% {
+    transform: rotate(-35deg);
+  }
+  95% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: translate(0, 0);
+    transform: rotate(0deg);
+  }
+}
