@@ -10,7 +10,7 @@ footer {
   margin: 120px, 16px, 16px, 97px;
   height: auto;
 }
-.container {
+.footer__container {
   margin-left: auto;
   margin-right: auto;
   padding: 0px 20px;
@@ -117,6 +117,10 @@ footer {
     color: $tertiary-color;
     transform: translate(-170px, 27px);
   }
+}
+.footer_title:hover > .footer_title-made {
+  color: $tertiary-color;
+  transform: translate(-170px, 27px);
 }
 .footer_text-box:hover .footer_title-ice-cream {
   @include desktop {

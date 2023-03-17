@@ -1,161 +1,219 @@
-.background{
-    width: 100%;
-    left: 20px;
-    padding-bottom: 20px;
-    background: $background-color-quaternary;
-    margin-top: 32px;
-    @include desktop {
+.background {
+  width: 100%;
+  left: 20px;
+  padding-bottom: 20px;
+  background: $background-color-quaternary;
+  margin-top: 32px;
+  @include desktop {
     width: 100%;
     left: 0px;
     margin: auto;
+  }
+  @include tablet {
+    margin: auto;
+    width: 100%;
+  }
+}
+.comments-main {
+  & {
+    animation: comments-main 20s linear infinite;
+    transition: transform 0.5s;
+  }
+
+  @keyframes comments-main {
+
+    /* from {
+      transform: rotateY(0deg);
     }
-    @include tablet{
-   margin: auto;
-   width: 100%;
-    }
+    to {
+      transform: rotateY(360deg);
+    } */
+
+    0% {
+      transform: translate(0, 0);
     }
 
-    
-.section-comment{
-     margin-bottom: 70px;
+    15% {
+      transform: translate(0px, -13px);
     }
-    
-.svg-comment{
-    width: 54px;
-    height: 40px;
-    margin-left: 72px;
-    margin-right: 20px;
-    @include desktop{
+
+    25% {
+      transform: rotate(16deg);
+    }
+
+    35% {
+      transform: rotate(-12deg);
+    }
+
+    65% {
+      transform: translate(0px, 10px);
+    }
+
+    75% {
+      transform: rotate(-13deg);
+    }
+
+    95% {
+      transform: rotate(12deg);
+    }
+
+    100% {
+      transform: translate(0, 0);
+      transform: rotate(0deg);
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+.section-comment {
+  margin-bottom: 120px;
+}
+
+.svg-comment {
+  width: 54px;
+  height: 40px;
+  margin-left: 72px;
+  margin-right: 20px;
+  @include desktop {
     margin-left: 72px;
     margin-top: 10px;
-    }
-    }
-    
+  }
+}
 
+.paragraph {
+  font-family: $text-dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  color: $secondary-color;
+  line-height: 255%;
+  margin-left: 35px;
+  margin-right: 35px;
+  text-decoration-color: rgba(225, 225, 225, 1);
+  text-decoration: underline;
+  text-underline-offset: 10px;
 
-.paragraph{
-    font-family: $text-dm-sans;
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    color: $secondary-color;
-    line-height: 255%;
-    margin-left: 35px;
-    margin-right: 35px;
-    text-decoration-color:  rgba(225,225,225,1);
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    
-    @include desktop {
+  @include desktop {
     text-align: center;
     justify-content: center;
     padding-left: 110px;
     padding-right: 110px;
     margin-top: -15px;
-    }
-    }
-.imagen-1{
-    display: flex;
-    align-items: center;
-    padding-bottom: 30px;
-    }
+  }
+}
+.imagen-1 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
 
-    
-.img-reviews{
-    width: 85px;
-    height: 85px;
-    border-radius: 44px;
-    margin: 0 auto;
-    }
+.img-reviews {
+  width: 85px;
+  height: 85px;
+  border-radius: 44px;
+  margin: 0 auto;
+}
 
-
-.comment{
-    list-style: none;
-    min-width: 320px;
-    max-width: 767px;
-    padding-left: 20px;
-    padding-right: 20px;
-    @include desktop{
+.comment {
+  list-style: none;
+  min-width: 320px;
+  max-width: 767px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include desktop {
     min-width: 1200px;
     margin: auto;
-    }
-    @include tablet{
+  }
+  @include tablet {
     width: 100%;
     margin: 0 auto;
-    }
-    }
+  }
+}
 
+.name-testimonials {
+  font-family: $text-dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  color: $secondary-color;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+}
 
-.name-testimonials{
-    font-family: $text-dm-sans;
-    font-style: normal;
-    font-weight: 500;
-    color: $secondary-color;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-    }
+.container-circle {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
 
-.container-circle{
-    display: flex;
-    margin-top: 24px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    }
-    
-    
-    
-.circle{
-    background-color: $background-color-septenary;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-   
-    }
-.circle-one{
-     background-color: $background-color-septenary;
-     width: 5px;
-     height: 5px;
-     border-radius: 50%;
-     margin-left: 10px;
-    }
-.circle-two{
-    background-color: $background-color-septenary;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    margin-left: 10px;
-    }
- .svg-comment-home{
-     width: 22px;
-    height: 22px;
-    fill: $tertiary-color;
-    margin-top: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
-    }
-.container{
-        padding: 0px;
-        display: flex;
-    }
-.house{
-     background-color: #D9D9D9;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    margin-top: 20px;
-    margin-right: 10px;
-    }
-.house1{
-        background-color: #D9D9D9;
-       border-radius: 50%;
-       width: 22px;
-       height: 22px;
-       margin-right: 10px;
-       margin-top: 20px;
-       }
-.transition{
-        display: flex;
-    }
+.circle-cero {
+  background-color: $background-color-septenary;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+}
+.circle-one {
+  background-color: $background-color-septenary;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+}
+.circle-two {
+  background-color: $background-color-septenary;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+}
+.svg-comment-home {
+  width: 22px;
+  height: 22px;
+  fill: $tertiary-color;
+  margin-top: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 
+}
+.container-img {
+  padding: 0px;
+  display: flex;
+}
+.house {
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin-top: 20px;
+  margin-right: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+}
+.house1 {
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  margin-top: 20px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+}
+.transition {
+  display: flex;
+  justify-content: center;
+}
