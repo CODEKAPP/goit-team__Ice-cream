@@ -137,6 +137,7 @@
   font-family: $text-titan-one;
   font-size: 18px;
   line-height: 1.16em;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -144,27 +145,39 @@
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
-  animation-name: subtitle;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    animation-name: subtitle;
-    animation-play-state: running;
-    cursor: none;
+  
+  @include tablet{
+    &:hover {
+      animation-name: subtitle;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-play-state: running;
+      cursor: none;
+    }
   }
-  &:not(:hover) {
-    animation-name: reset;
+  @include desktop{
+    &:hover {
+      animation-name: subtitle;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-play-state: running;
+      cursor: none;
+    }
   }
+
 }
 @keyframes subtitle {
   0% {
-    transform: translateY(-100px);
-    letter-spacing: 5.5px;
+    //transform: translateY(-100px);
+    font-size: 30px;
+    letter-spacing: 18px;
+    //letter-spacing: 5.5px;
     z-index: 3;
   }
   100% {
-    transform: translateY(0px);
+    //transform: translateY(0px);
+    font-size: 19px;
+    letter-spacing: 3px;
   }
 }
 .made__title {
@@ -178,30 +191,34 @@
   color: $background-color-septenary;
   min-width: 200px;
   padding: 5px;
-  animation-name: title;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
   @include tablet {
     min-width: none;
+    &:hover {
+      animation-name: title;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
-  &:hover {
-    animation-name: title;
-    animation-play-state: running;
-    cursor: none;
-  }
-  &:not(:hover) {
-    animation-name: reset;
+  @include desktop{
+    &:hover {
+      animation-name: title;
+      animation-duration: 5s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }
 @keyframes title {
   0% {
-    transform: translateY(200px);
-    letter-spacing: 0.5px;
+    //transform: translateY(200px);
+    letter-spacing: 30px;
+    font-size: 54px;
     z-index: 3;
   }
   100% {
-    transform: translateY(0px);
+    //transform: translateY(0px);
+    letter-spacing: 0.5px;
+    font-size: 35px;
   }
 }
 @keyframes reset {
@@ -245,6 +262,15 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(25px / 14px);
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(28px / 16px);
+  }
 }
 .description__main__content-more {
   width: 280px;
@@ -270,6 +296,15 @@
   }
   &:last-child {
     padding-bottom: 15px;
+  }
+  @include tablet {
+    font-size: 14px;
+    line-height: calc(25px / 14px);
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(27px / 14px);
   }
 }
 .button-less {
@@ -314,4 +349,60 @@
 .container-less {
   display: block;
   background-color: red;
+}
+
+// arrow
+
+.scroll-to-top {
+  position: fixed;
+  display: none;
+  justify-items: center;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: $background-color-rgba-secondary;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  fill: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  z-index: 9999;
+}
+.scroll-to-top:hover {
+  background-color: $background-color-septenary;
+  cursor: pointer;
+  animation: header 3s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
+}
+.scroll-to-top:not(:hover) {
+  cursor: pointer;
+  animation: header 8s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
+}
+@keyframes header {
+  0% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(0px, -16px);
+  }
+  25% {
+    transform: rotate(35deg);
+  }
+  35% {
+    transform: rotate(-20deg);
+  }
+  65% {
+    transform: translate(0px, 10px);
+  }
+  75% {
+    transform: rotate(-35deg);
+  }
+  95% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: translate(0, 0);
+    transform: rotate(0deg);
+  }
 }
