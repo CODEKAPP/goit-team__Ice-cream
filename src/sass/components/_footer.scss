@@ -16,10 +16,16 @@ footer {
   padding: 0px 20px;
   max-width: 480px;
   @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 768px;
     padding: 0 35px;
   }
   @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1280px;
     padding: 0 115px;
   }
@@ -38,16 +44,17 @@ footer {
   }
 }
 .footer_text-box {
-  width: 232px;
+  padding-bottom: 100px;
+  // width: 232px;
   @include desktop {
     width: 480px;
   }
   @include tablet {
     width: 340px;
   }
-  @include mobile {
-    width: 232px;
-  }
+  // @include mobile {
+  //   width: 232px;
+  // }
 }
 .footer_title-ice-cream,
 .footer_title-made {
@@ -97,6 +104,14 @@ footer {
     margin-bottom: 17px;
   }
 }
+.footer_title {
+  @include desktop {
+    width: auto;
+  }
+  @include tablet {
+    width: 400px;
+  }
+}
 .footer_title,
 .footer_title-ice-cream .footer_title-letter,
 .footer_title-made {
@@ -107,6 +122,7 @@ footer {
   vertical-align: top;
   letter-spacing: 4%;
   line-height: 100%;
+  margin-bottom: 10px;
 }
 .footer_title-ice-cream,
 .footer_title-made {
@@ -166,7 +182,6 @@ footer {
   }
 }
 .footer__title-letter-title-push {
-  width: $original-size;
   height: $original-size;
   transition: all 0.3s ease-in-out;
 }
@@ -179,7 +194,6 @@ footer {
   }
 }
 .footer_title-letter {
-  width: $original-size;
   height: $original-size;
   transition: all 0.3s ease-in-out;
   @include tablet {
@@ -201,7 +215,13 @@ footer {
   font-family: $text-titan-one, $text-dm-sans;
   font-weight: 400;
   text-transform: uppercase;
-  padding-top: 16px;
+  padding-top: 0;
+  @include desktop {
+    padding-top: 16px;
+  }
+  @include tablet {
+    padding-top: 0;
+  }
 }
 .footer_title-word {
   display: flex;
@@ -220,7 +240,7 @@ footer {
   margin-right: -2px;
 }
 .contacts-information {
-  margin-left: 255px;
+  // margin-left: 255px;
   vertical-align: Top;
   @include tablet {
     margin-left: auto;
@@ -280,10 +300,10 @@ footer {
   padding-bottom: 60px;
   cursor: default;
   @include mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // margin-top: 20px;
   }
 }
 .contact-box__text {
@@ -313,18 +333,17 @@ footer {
   text-decoration: none;
   align-items: right;
   vertical-align: Top;
-  transform: scale(1);
   cursor: pointer;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   @include mobile {
-    display: inline-block;
+    // display: inline-block;
   }
 }
 .contact-information:hover,
 .contact-box__phone:hover,
 .contact-box__phone:focus {
-  transform: scale(1.2) translateX(12px);
+  transform: scale(1.1) translateX(0);
   color: $tertiary-color; ///
 }
 
@@ -336,6 +355,8 @@ footer {
   font-size: 14px;
   line-height: 1.52;
   white-space: nowrap;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   @include tablet {
     line-height: 1.86;
     max-width: 276px;
