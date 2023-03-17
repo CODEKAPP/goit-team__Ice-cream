@@ -34,10 +34,13 @@
 .section-contacts {
   margin: auto;
   padding: 0 0 113px;
-  background-color: $background-color-rgba-tertiary;
+  background-color: $background-color-tertiary;
   @media screen and (min-width: 768px) {
     margin: auto;
-    padding: 0 0 165px;
+    padding: 0 0 20px;
+  }
+  @include desktop{
+    max-width: 1280px;
   }
 }
 
@@ -109,7 +112,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-bottom: 81px;
+    // margin-bottom: 81px;
     flex-direction: row;
   }
 }
