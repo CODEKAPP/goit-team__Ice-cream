@@ -21,11 +21,45 @@
   }
 
   @keyframes comments-main {
-    from {
+
+    /* from {
       transform: rotateY(0deg);
     }
     to {
       transform: rotateY(360deg);
+    } */
+
+    0% {
+      transform: translate(0, 0);
+    }
+
+    15% {
+      transform: translate(0px, -13px);
+    }
+
+    25% {
+      transform: rotate(16deg);
+    }
+
+    35% {
+      transform: rotate(-12deg);
+    }
+
+    65% {
+      transform: translate(0px, 10px);
+    }
+
+    75% {
+      transform: rotate(-13deg);
+    }
+
+    95% {
+      transform: rotate(12deg);
+    }
+
+    100% {
+      transform: translate(0, 0);
+      transform: rotate(0deg);
     }
   }
 
@@ -121,6 +155,8 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .circle-one {
   background-color: $background-color-septenary;
@@ -128,6 +164,8 @@
   height: 5px;
   border-radius: 50%;
   margin-left: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .circle-two {
   background-color: $background-color-septenary;
@@ -135,6 +173,8 @@
   height: 5px;
   border-radius: 50%;
   margin-left: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .svg-comment-home {
   width: 22px;
@@ -143,8 +183,11 @@
   margin-top: 20px;
   border-radius: 50%;
   margin-right: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
+
 }
-.container {
+.container-img {
   padding: 0px;
   display: flex;
 }
@@ -155,6 +198,8 @@
   height: 22px;
   margin-top: 20px;
   margin-right: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .house1 {
   background-color: #d9d9d9;
@@ -163,7 +208,10 @@
   height: 22px;
   margin-right: 10px;
   margin-top: 20px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .transition {
   display: flex;
+  justify-content: center;
 }
