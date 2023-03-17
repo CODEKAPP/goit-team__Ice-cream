@@ -4,16 +4,18 @@
     padding-bottom: 20px;
     background: $background-color-quaternary;
     margin-top: 32px;
+    
     @include desktop {
-    width: 100%;
-    left: 0px;
-    margin: auto;
+        width: 968px;
+        left: 0px;
+        margin: auto;
     }
+
     @include tablet{
-   margin: auto;
-   width: 100%;
+        margin: auto;
+        width: 70%;
     }
-    }
+}
 
     
 .section-comment{
@@ -71,19 +73,22 @@
 
 .comment{
     list-style: none;
-    min-width: 320px;
-    max-width: 767px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 120px;
+
     @include desktop{
-    min-width: 1200px;
-    margin: auto;
+        margin: auto;
+        margin-bottom: 120px;
     }
+
     @include tablet{
-    width: 100%;
-    margin: 0 auto;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 120px;
     }
-    }
+
+}
 
 
 .name-testimonials{
@@ -135,7 +140,7 @@
     border-radius: 50%;
     margin-right: 10px;
     }
-.container{
+.container-img{
         padding: 0px;
         display: flex;
     }
@@ -157,5 +162,7 @@
        }
 .transition{
         display: flex;
+        padding: 0px;
+        justify-content: center;
     }
 
