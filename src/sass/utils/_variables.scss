@@ -4,11 +4,16 @@ $secondary-color: #000; // text
 $tertiary-color: #d41443; //title, text
 $quaternary-color: #ffa5ba; //subtitle, hours
 $quinary-color: #907e82; //description
-// $senary-color: #eee;
-// $septenary-color: #afb1bb;
+$senary-color: #e1e1e1;
+$septenary-color: #907e82; 
+$octonary-color: #d9d9d9; 
 
 //colors rgba
 $primary-color-rgba: rgba(224, 10, 31, 0.1);
+$secondary-color-rgba: rgba(33, 33, 33, 0.2);
+$tertiary-color-rgba: rgba(255, 255, 255, 0.7);
+$quaternary-color-rgba: rgba(255, 255, 255, 0.5);
+$quinary-color-rgba: rgba(255, 255, 255, 1);
 
 //Backgroup
 $background-color-primary: #ffb8ca; //section-one
@@ -24,11 +29,18 @@ $background-color-rgba-primary: rgba(255, 184, 202, 1);
 $background-color-rgba-secondary: rgba(225, 121, 146, 1);
 $background-color-rgba-tertiary: rgb(238, 229, 229);
 $background-color-rgba-quaternary: rgba(0, 0, 0, 0.2);
+$background-color-rgba-quinary: rgba(212, 19, 66, 1);
+$background-color-rgba-senary:  rgba(117, 117, 117, 0.5);
 
 //box-shadow
 $box-shadow-primary: 0px 8px 30px rgba(212, 20, 67, 0.1);
-// $box-shadow-secondary:
-// $box-shadow-tertiary:
+$box-shadow-secondary: 2px 2px 3px rgba(0, 0, 0, 0.25);
+ $box-shadow-tertiary: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+ $box-shadow-quaternary: 0px 1px 3px rgba(0, 0, 0, 0.12) ;
+ $box-shadow-quinary:0px 1px 1px rgba(0, 0, 0, 0.14)  ;
+ $box-shadow-senary: 0px 2px 1px rgba(0, 0, 0, 0.2) ;
+ $box-shadow-septenary: 0px 8px 30px rgba(144, 35, 62, 0.632);
+ $box-shadow-octonary: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
 //others
 $primary-color-border: #e1e1e1; //copyright box
@@ -36,6 +48,6 @@ $primary-color-border: #e1e1e1; //copyright box
 //Text
 $text-dm-sans: 'DM Sans', 'sans-serif'; // example
 $text-titan-one: 'Titan One', 'sans-serif'; // example
-//// Definir las variables para el tamaño original y el tamaño con zoom
+// Definir las variables para el tamaño original y el tamaño con zoom
 $original-size: 100%;
 $zoom-size: 120%;
