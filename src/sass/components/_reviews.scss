@@ -1,3 +1,8 @@
+//variable
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../base/global';
+
 .background {
   width: 100%;
   left: 20px;
@@ -19,16 +24,33 @@
     animation: comments-main 20s linear infinite;
     transition: transform 0.5s;
   }
-
   @keyframes comments-main {
-    from {
-      transform: rotateY(0deg);
+    0% {
+      transform: translate(0, 0);
     }
-    to {
-      transform: rotateY(360deg);
+    15% {
+      transform: translate(0px, -13px);
+    }
+    25% {
+      transform: rotate(16deg);
+    }
+    35% {
+      transform: rotate(-12deg);
+    }
+    65% {
+      transform: translate(0px, 10px);
+    }
+    75% {
+      transform: rotate(-13deg);
+    }
+    95% {
+      transform: rotate(12deg);
+    }
+    100% {
+      transform: translate(0, 0);
+      transform: rotate(0deg);
     }
   }
-
   &:hover {
     animation-play-state: paused;
   }
@@ -36,7 +58,6 @@
 .section-comment {
   margin-bottom: 120px;
 }
-
 .svg-comment {
   width: 54px;
   height: 40px;
@@ -47,7 +68,6 @@
     margin-top: 10px;
   }
 }
-
 .paragraph {
   font-family: $text-dm-sans;
   font-style: normal;
@@ -57,10 +77,9 @@
   line-height: 255%;
   margin-left: 35px;
   margin-right: 35px;
-  text-decoration-color: rgba(225, 225, 225, 1);
+  text-decoration-color: $quinary-color-rgba;
   text-decoration: underline;
   text-underline-offset: 10px;
-
   @include desktop {
     text-align: center;
     justify-content: center;
@@ -74,14 +93,12 @@
   align-items: center;
   padding-bottom: 30px;
 }
-
 .img-reviews {
   width: 85px;
   height: 85px;
   border-radius: 44px;
   margin: 0 auto;
 }
-
 .comment {
   list-style: none;
   min-width: 320px;
@@ -97,7 +114,6 @@
     margin: 0 auto;
   }
 }
-
 .name-testimonials {
   font-family: $text-dm-sans;
   font-style: normal;
@@ -106,8 +122,9 @@
   margin-top: 20px;
   width: 100%;
   text-align: center;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
-
 .container-circle {
   display: flex;
   margin-top: 24px;
@@ -115,12 +132,13 @@
   justify-content: center;
   margin-left: 10px;
 }
-
-.circle {
+.circle-cero {
   background-color: $background-color-septenary;
   width: 5px;
   height: 5px;
   border-radius: 50%;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .circle-one {
   background-color: $background-color-septenary;
@@ -128,6 +146,8 @@
   height: 5px;
   border-radius: 50%;
   margin-left: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .circle-two {
   background-color: $background-color-septenary;
@@ -135,6 +155,8 @@
   height: 5px;
   border-radius: 50%;
   margin-left: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .svg-comment-home {
   width: 22px;
@@ -143,27 +165,34 @@
   margin-top: 20px;
   border-radius: 50%;
   margin-right: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
-.container {
+.container-img {
   padding: 0px;
   display: flex;
 }
 .house {
-  background-color: #d9d9d9;
+  background-color: $octonary-color;
   border-radius: 50%;
   width: 22px;
   height: 22px;
   margin-top: 20px;
   margin-right: 10px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .house1 {
-  background-color: #d9d9d9;
+  background-color: $octonary-color;
   border-radius: 50%;
   width: 22px;
   height: 22px;
   margin-right: 10px;
   margin-top: 20px;
+  animation: comments-main 5s linear infinite;
+  transition: transform 0.5s;
 }
 .transition {
   display: flex;
+  justify-content: center;
 }
