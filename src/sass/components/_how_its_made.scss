@@ -8,10 +8,7 @@
   background-size: cover;
   position: relative;
   width: 100%;
-  // animation: moveBackground 150s cubic-bezier(0.4, 0, 0.2, 1) infinite,
-  // trembleBackground 15s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }
-
 .how__its__made::after {
   content: '';
   position: absolute;
@@ -45,63 +42,6 @@
     animation: jug 5s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
   }
 }
-@keyframes jug {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(16px, -16px);
-  }
-  50% {
-    transform: rotate(50deg);
-  }
-  75% {
-    transform: rotate(-12deg);
-  }
-  100% {
-    transform: translate(0, 0);
-    transform: rotate(0deg);
-  }
-}
-@keyframes moveBackground {
-  0% {
-    background-position: center -0%;
-    transform: rotate(0deg);
-  }
-  25% {
-    background-position: center -50%;
-    transform: rotate(4deg);
-  }
-  50% {
-    background-position: center -0%;
-    transform: rotate(0deg);
-  }
-  75% {
-    background-position: center 50%;
-    transform: rotate(-4deg);
-  }
-  100% {
-    background-position: center 0%;
-    transform: rotate(0deg);
-  }
-}
-@keyframes trembleBackground {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(3px, -3px);
-  }
-  50% {
-    transform: translate(0, 0);
-  }
-  75% {
-    transform: translate(-3px, 3px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 .container-center {
   margin-left: auto;
   margin-right: auto;
@@ -113,30 +53,24 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-
   @include tablet {
     max-width: 1199px;
   }
-
   @include desktop {
     max-width: 1300px;
   }
-
   & .footer__container {
-
     margin-bottom: 43px;
 
     @include tablet {
       margin-bottom: 91px;
       display: flex;
     }
-
     @include desktop {
       margin-bottom: 97px;
     }
   }
 }
-
 .made_subtitle {
   font-family: $text-titan-one;
   font-size: 18px;
@@ -149,8 +83,7 @@
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
-  
-  @include tablet{
+  @include tablet {
     &:hover {
       animation-name: subtitle;
       animation-duration: 5s;
@@ -159,7 +92,7 @@
       cursor: none;
     }
   }
-  @include desktop{
+  @include desktop {
     &:hover {
       animation-name: subtitle;
       animation-duration: 5s;
@@ -167,21 +100,6 @@
       animation-play-state: running;
       cursor: none;
     }
-  }
-
-}
-@keyframes subtitle {
-  0% {
-    //transform: translateY(-100px);
-    font-size: 30px;
-    letter-spacing: 18px;
-    //letter-spacing: 5.5px;
-    z-index: 3;
-  }
-  100% {
-    //transform: translateY(0px);
-    font-size: 19px;
-    letter-spacing: 3px;
   }
 }
 .made__title {
@@ -195,7 +113,6 @@
   color: $background-color-septenary;
   min-width: 200px;
   padding: 5px;
-  
   @include tablet {
     min-width: none;
     &:hover {
@@ -204,7 +121,7 @@
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
-  @include desktop{
+  @include desktop {
     &:hover {
       animation-name: title;
       animation-duration: 5s;
@@ -214,13 +131,11 @@
 }
 @keyframes title {
   0% {
-    //transform: translateY(200px);
     letter-spacing: 30px;
     font-size: 54px;
     z-index: 3;
   }
   100% {
-    //transform: translateY(0px);
     letter-spacing: 0.5px;
     font-size: 35px;
   }
@@ -232,7 +147,6 @@
 }
 .container__description {
   margin-top: 32px;
-  // margin-bottom: 40px;
   @include tablet {
     display: flex;
   }
@@ -246,7 +160,7 @@
   @include tablet {
     margin-right: 32px;
   }
-  @include desktop{
+  @include desktop {
     margin-right: 99px;
   }
 }
@@ -270,7 +184,6 @@
     font-size: 14px;
     line-height: calc(25px / 14px);
   }
-
   @include desktop {
     font-size: 16px;
     line-height: calc(28px / 16px);
@@ -305,7 +218,6 @@
     font-size: 14px;
     line-height: calc(25px / 14px);
   }
-
   @include desktop {
     font-size: 14px;
     line-height: calc(27px / 14px);
@@ -328,8 +240,7 @@
   &:hover,
   &:focus {
     transform: perspective(83px) rotateY(-7deg);
-    // box-shadow: $background-color-septenary;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: $box-shadow-tertiary;
     transition-property: box-shadow, background-color, color;
     transition-duration: 5s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -337,8 +248,7 @@
   &:hover .icon__less,
   &:focus .icon__less {
     transform: perspective(83px) rotateY(-7deg);
-    // box-shadow: $background-color-septenary;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: $box-shadow-tertiary;
     transition-property: box-shadow, background-color, color;
     transition-duration: 5s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -352,11 +262,8 @@
 }
 .container-less {
   display: block;
-  background-color: red;
 }
-
 // arrow
-
 .scroll-to-top {
   position: fixed;
   display: none;
@@ -366,8 +273,8 @@
   width: 40px;
   height: 40px;
   background-color: $background-color-rgba-secondary;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-  fill: #fff;
+  box-shadow: $box-shadow-secondary;
+  fill: $primary-color;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
@@ -382,31 +289,4 @@
 .scroll-to-top:not(:hover) {
   cursor: pointer;
   animation: header 8s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
-}
-@keyframes header {
-  0% {
-    transform: translate(0, 0);
-  }
-  15% {
-    transform: translate(0px, -16px);
-  }
-  25% {
-    transform: rotate(35deg);
-  }
-  35% {
-    transform: rotate(-20deg);
-  }
-  65% {
-    transform: translate(0px, 10px);
-  }
-  75% {
-    transform: rotate(-35deg);
-  }
-  95% {
-    transform: rotate(12deg);
-  }
-  100% {
-    transform: translate(0, 0);
-    transform: rotate(0deg);
-  }
 }
